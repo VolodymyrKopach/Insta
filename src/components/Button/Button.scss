@@ -1,0 +1,39 @@
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  width: 5.25rem;
+  height: 2.5rem;
+
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  border-width: .5px;
+  border-style: solid;
+
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: .75rem;
+  line-height: 1.25rem;
+
+  &-black, &-blue{
+    color: #FAFBFC;
+  }
+
+  &-black {
+    background: #010101;
+    border-color: #C9CAD1;
+  }
+
+  &-blue {
+    background: #0087FF;
+    border-color: #0087FF;
+  }
+
+  &-white {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+}

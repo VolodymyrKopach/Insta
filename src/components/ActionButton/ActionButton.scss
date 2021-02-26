@@ -1,0 +1,23 @@
+.action-button {
+  display: flex;
+  cursor: pointer;
+
+  &-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &-reverse {
+    flex-direction: row-reverse;
+
+    .action-button-icon {
+      margin-left: .5rem;
+    }
+  }
+
+  &-normal {
+    .action-button-text{
+      margin-left: .5rem;
+    }
+  }
+}
