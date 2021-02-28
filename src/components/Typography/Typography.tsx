@@ -1,4 +1,4 @@
-import './Typography.scss';
+import styles from './Typography.module.scss';
 
 import React, {FC} from 'react';
 import classNames from 'classnames';
@@ -11,7 +11,7 @@ type PropTypes = {
 };
 
 const Typography: FC<PropTypes> = ({className, size, color, text} : PropTypes) => (
-  <p className={classNames('typography', `typography--${color}`, `typography--${size}`, className)}>{text}</p>
+  <p className={classNames(styles.typography, styles[color], styles[size], className)}>{text}</p>
 );
 
 export default Typography;

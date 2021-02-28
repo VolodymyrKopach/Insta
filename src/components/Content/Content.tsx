@@ -1,4 +1,4 @@
-import './Content.scss';
+import styles from './Content.module.scss';
 
 import React, {FC} from 'react';
 
@@ -6,9 +6,9 @@ import MainInfo from '../MainInfo/MainInfo';
 import UserInfo from '../UserInfo/UserInfo';
 
 const Content: FC = () => (
-  <div className='content-container'>
+  <div className={styles.content}>
     <MainInfo/>
-    <UserInfo className='user-info-container'/>
+    <UserInfo className={styles.userInfo}/>
   </div>
 );
 

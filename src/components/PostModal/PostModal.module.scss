@@ -1,0 +1,82 @@
+.postModalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  background-color: rgba(229, 229, 229, 0.4);
+  z-index: 10;
+
+  .postModal {
+    display: flex;
+    width: 67.5rem;
+    height: 42.5rem;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+
+    .postPhoto {
+      height: 42.5rem;
+      width: 37.5rem;
+      border-radius: 2rem 0 0 2rem;
+    }
+
+    .infoSection {
+      width: 100%;
+      height: 100%;
+
+      .modalHeaderSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 26rem;
+        height: 2.5rem;
+        padding: 1.25rem 2rem;
+
+        .closeIconElement {
+          &:before {
+            font-size: 4rem;
+            color: #808080;
+            content: '\d7';
+          }
+        }
+      }
+
+      .commentsSection {
+        padding: 0 2rem;
+        height: 29rem;
+
+        .comment {
+          margin: 1.25rem 0;
+        }
+      }
+
+      .likesSection {
+        display: flex;
+        align-items: center;
+        height: 1.5rem;
+        padding: 1.25rem 2rem;
+      }
+
+      .addCommentSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 2.5rem;
+        padding: 1.25rem 2rem;
+
+        .sendButton {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          color: #0087FF;
+        }
+      }
+    }
+  }
+}

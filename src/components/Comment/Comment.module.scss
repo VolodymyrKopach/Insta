@@ -1,0 +1,24 @@
+.comment {
+  display: flex;
+  justify-content: space-between;
+
+ .mainInfo {
+   display: flex;
+   align-items: center;
+
+   .postedInfo {
+     display: flex;
+     flex-direction: column;
+     margin-left: .75rem;
+
+     .infoSection{
+       display: flex;
+       justify-content: space-around;
+     }
+   }
+ }
+
+  .likeIcon{
+    width: 1.75rem;
+  }
+}

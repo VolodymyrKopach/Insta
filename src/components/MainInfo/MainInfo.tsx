@@ -1,4 +1,4 @@
-import './MainInfo.scss';
+import styles from './MainInfo.module.scss';
 
 import React, {FC} from 'react';
 
@@ -7,8 +7,8 @@ import Post from '../Post/Post';
 import Stories from '../Stories/Stories';
 
 const MainInfo: FC = () => (
-  <div className='main-info-container'>
-    <Stories className='stories-container'/>
+  <div className={styles.mainInfo}>
+    <Stories className={styles.stories}/>
     {posts.map((post, index) => (
       <Post key={index} className='post-margin' post={post}/>
     ))}

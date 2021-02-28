@@ -1,18 +1,18 @@
 @import './src/assets/styles/mixins';
 
-.content-container{
+.content{
   display: flex;
   justify-content: center;
   max-width: 60rem;
 
-  .user-info-container {
+  .userInfo {
     display: inline;
   }
 }
 
 @include tablet {
-  .content-container{
-    .user-info-container {
+  .content{
+    .userInfo {
       display: none;
     }
   }

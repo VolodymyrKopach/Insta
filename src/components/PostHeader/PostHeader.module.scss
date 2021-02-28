@@ -1,22 +1,22 @@
-.post-header-container {
+.postHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 
-  .left-section{
+  .postAuthor{
     display: flex;
 
-    .typography-margin {
+    .typographyMargin {
       margin-left: 1rem;
     }
   }
 
-  .options-icon {
+  .optionsIcon {
     display: flex;
     flex-direction: column;
 
-    &-circle {
+    .circle {
       width: .25rem;
       height: .25rem;
       border-radius: .25rem;

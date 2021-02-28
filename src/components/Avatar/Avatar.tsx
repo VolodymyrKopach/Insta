@@ -1,4 +1,4 @@
-import './Avatar.scss';
+import styles from './Avatar.module.scss';
 
 import React, {FC} from 'react';
 import classNames from 'classnames';
@@ -11,7 +11,7 @@ type PropTypes = {
 
 const Avatar: FC<PropTypes> = ({size, className, photoUrl}: PropTypes) => (
   <img
-    className={classNames('avatar', `avatar--${size}`, className)}
+    className={classNames(styles.avatar, styles[size], className)}
     src={photoUrl}
     alt='avatar'/>
 );

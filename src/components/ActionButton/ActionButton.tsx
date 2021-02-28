@@ -1,6 +1,6 @@
-import './ActionButton.scss';
+import styles from './ActionButton.module.scss';
 
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import classNames from 'classnames';
 
 import Typography from '../Typography/Typography';
@@ -12,21 +12,36 @@ type PropTypes = {
   iconAlt: string,
   buttonText: string,
   children?: never;
+  onClick?: () => void
 };
 
-const ActionButton: FC<PropTypes> = ({className, icon, iconAlt, isElementOrderReverse, buttonText} : PropTypes) => (
-  <div className={
-    classNames(
-      'action-button',
-      {'action-button-reverse': isElementOrderReverse},
-      {'action-button-normal': !isElementOrderReverse},
+const ActionButton: FC<PropTypes> = (
+  {
+    className,
+    icon,
+    iconAlt,
+    isElementOrderReverse,
+    buttonText,
+    onClick
+  }: PropTypes) => (
+  <div
+    onClick={onClick}
+    className={classNames(
+      styles.button,
+      {[styles.reverse]: isElementOrderReverse},
+      {[styles.normal]: !isElementOrderReverse},
       className)}>
     <img
-      className={classNames('action-button-icon')}
+      className={classNames(styles.icon)}
       src={icon}
       alt={iconAlt}/>
-    <Typography className='action-button-text' text={buttonText} color='secondary' size='medium'/>
+    <Typography className={styles.text} text={buttonText} color='secondary' size='medium'/>
   </div>
 );
+
+ActionButton.defaultProps = {
+  onClick: () => {
+  }
+}
 
 export default ActionButton;

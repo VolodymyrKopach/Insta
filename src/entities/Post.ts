@@ -1,10 +1,12 @@
 import {Author} from './Author';
+import {Comment} from './Comment';
+import {Like} from './Like';
 
 export interface Post {
   photoUrl: string;
   description: string;
-  comments: number;
+  comments: Array<Comment>;
   time: string;
-  likes: number;
-  author: Author;
+  likes: Array<Like>;
+  authorShortcut: Author;
 }

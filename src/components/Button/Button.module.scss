@@ -17,23 +17,23 @@
   font-weight: 600;
   font-size: .75rem;
   line-height: 1.25rem;
+}
 
-  &-black, &-blue{
-    color: #FAFBFC;
-  }
+.black, .blue{
+  color: #FAFBFC;
+}
 
-  &-black {
-    background: #010101;
-    border-color: #C9CAD1;
-  }
+.black {
+  background: #010101;
+  border-color: #C9CAD1;
+}
 
-  &-blue {
-    background: #0087FF;
-    border-color: #0087FF;
-  }
+.blue {
+  background: #0087FF;
+  border-color: #0087FF;
+}
 
-  &-white {
-    background: #FFFFFF;
-    border-color: #FFFFFF;
-  }
+.white {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
 }

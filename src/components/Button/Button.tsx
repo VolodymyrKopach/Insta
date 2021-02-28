@@ -1,4 +1,4 @@
-import './Button.scss';
+import styles from './Button.module.scss';
 
 import React, {FC} from 'react';
 import classNames from 'classnames';
@@ -10,7 +10,7 @@ type PropTypes = {
 };
 
 const Button: FC<PropTypes> = ({className, color, text}: PropTypes) => (
-  <button className={classNames('button', `button-${color}`, className)}>
+  <button className={classNames(styles.button, styles[color], className)}>
     {text}
   </button>
 );

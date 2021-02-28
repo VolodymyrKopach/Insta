@@ -1,4 +1,4 @@
-.header-container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,11 +21,11 @@
     color: #010101;
   }
 
-  .user-section {
+  .userSection {
     display: flex;
     margin-right: 4rem;
 
-    .language-selector {
+    .languageSelector {
       display: flex;
       justify-content: center;
       align-items: center;

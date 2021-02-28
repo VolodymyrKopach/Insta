@@ -1,4 +1,4 @@
-import './Header.scss';
+import styles from './Header.module.scss';
 
 import React, {FC} from 'react';
 
@@ -7,11 +7,11 @@ import Button from '../Button/Button';
 import {user} from '../../data/user';
 
 const Header: FC = () => (
-  <div className='header-container'>
-    <div className='logo'>Linkstagram</div>
-    <div className='user-section'>
+  <div className={styles.header}>
+    <div className={styles.logo}>Linkstagram</div>
+    <div className={styles.userSection}>
       <Button color='black' text='Home'/>
-      <button className='language-selector'>EN</button>
+      <button className={styles.languageSelector}>EN</button>
       <Avatar size='small' photoUrl={user.photoUrl}/>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import './Stories.scss';
+import styles from './Stories.module.scss';
 
 import React, {FC} from 'react';
 import classNames from 'classnames';
@@ -11,9 +11,9 @@ type PropTypes = {
 };
 
 const Stories: FC<PropTypes> = ({className} : PropTypes) => (
-  <div className={classNames('stories', className)}>
+  <div className={classNames(styles.stories, className)}>
     {stories.map((story, index) => (
-      <Avatar className='story' size='medium' photoUrl={story.author.photoUrl}/>
+      <Avatar className={styles.story} size='medium' photoUrl={story.author.photoUrl}/>
     ))}
   </div>
 );

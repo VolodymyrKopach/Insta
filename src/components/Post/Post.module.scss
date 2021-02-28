@@ -5,29 +5,29 @@
   max-width: 35rem;
   margin-top: 3.25rem;
 
-  &-photo {
+  .photo {
     width: 35rem;
     height: 35rem;
     border-radius: 3rem;
     margin-top: 1rem;
   }
 
-  &-description {
+  .description {
     height: 4.5rem;
-    margin-top: 1.25rem !important;
+    margin-top: 1.25rem;
   }
 
-  &-actions {
+  .actions {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
 
-    &-left-section {
+    .leftSection {
       display: flex;
+    }
 
-      .comment-button-margin {
-        margin-left: 2.5rem;
-      }
+    .commentButtonMargin {
+      margin-left: 2.5rem;
     }
   }
 }

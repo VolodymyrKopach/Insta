@@ -1,4 +1,4 @@
-import './UserInfo.scss';
+import styles from './UserInfo.module.scss';
 
 import React, {FC} from 'react';
 import classNames from 'classnames';
@@ -13,25 +13,25 @@ type PropTypes = {
 };
 
 const UserInfo: FC<PropTypes> = ({className} : PropTypes) => (
-  <div className={classNames('user-info', className)}>
-    <div className='user-info-followers-section'>
-        <div className='follow-info'>
+  <div className={classNames(styles.userInfo, className)}>
+    <div className={styles.followersSection}>
+        <div className={styles.followInfo}>
             <Typography text={user.followers.toString()} color='secondary' size='medium'/>
             <Typography text='Followers' color='primary' size='medium'/>
         </div>
-        <Avatar className='avatar' size='large' photoUrl={user.photoUrl}/>
-        <div className='follow-info'>
+        <Avatar className={styles.avatar} size='large' photoUrl={user.photoUrl}/>
+        <div className={styles.followInfo}>
             <Typography text={user.following.toString()} color='secondary' size='medium'/>
             <Typography text='Following' color='primary' size='medium'/>
         </div>
     </div>
-    <div className='user-info-title-section'>
+    <div className={styles.titleSection}>
         <Typography text={user.title} color='secondary' size='medium'/>
-        <Typography className='user-info-description' text={user.description} color='primary' size='small'/>
+        <Typography className={styles.description} text={user.description} color='primary' size='small'/>
     </div>
-    <div className='user-info-action-section'>
+    <div className={styles.actionSection}>
         <Button color='white' text='Edit profile'/>
-        <Button className='button-margin' color='blue' text='New post'/>
+        <Button className={styles.buttonMargin} color='blue' text='New post'/>
     </div>
   </div>
 );
