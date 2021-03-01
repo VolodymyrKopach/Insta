@@ -1,11 +1,9 @@
 import styles from './PostModal.module.scss';
 
-
 import React, {FC} from 'react';
 import classNames from 'classnames';
 
 import likeIcon from '../../assets/img/like.svg';
-import activeLikeIcon from '../../assets/img/active_like.svg';
 import PostAuthor from '../PostAuthor/PostAuthor';
 import {Post} from '../../types/Post';
 import Divider from '../Divider/Divider';
@@ -14,11 +12,14 @@ import ActionButton from '../ActionButton/ActionButton';
 
 type PropTypes = {
   className?: string,
+  comment?: string,
   post: Post,
-  onClose: () => void
+  onClose: () => void,
+  onAddComment: () => void,
+  onChangeComment: (event: any) => void
 };
 
-const PostModal: FC<PropTypes> = ({post, onClose}: PropTypes) => (
+const PostModal: FC<PropTypes> = ({post, onClose, onAddComment, onChangeComment, comment}: PropTypes) => (
   <div className={styles.container}>
     <div className={styles.postModal}>
       <img
@@ -34,7 +35,7 @@ const PostModal: FC<PropTypes> = ({post, onClose}: PropTypes) => (
         <div className={styles.commentsSection}>
           {post.comments.map((comment, index) => (
             <Comment key={index} className={styles.comment} comment={comment}/>
-            ))}
+          ))}
         </div>
         <Divider/>
         <div className={styles.likesSection}>
@@ -42,8 +43,13 @@ const PostModal: FC<PropTypes> = ({post, onClose}: PropTypes) => (
         </div>
         <Divider/>
         <div className={styles.addCommentSection}>
-          <input className={styles.commentInput} type='text' placeholder='Add a comment...'/>
-          <div className={styles.sendButton}>Send</div>
+          <input
+            className={styles.commentInput}
+            onChange={onChangeComment}
+            value={comment}
+            type='text'
+            placeholder='Add a comment...'/>
+          <div className={styles.sendButton} onClick={onAddComment}>Send</div>
         </div>
       </div>
     </div>

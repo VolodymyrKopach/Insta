@@ -11,8 +11,8 @@ import {Post as PostEntity} from '../../types/Post'
 import PostHeader from '../PostHeader/PostHeader';
 import Typography from '../Typography/Typography';
 import ActionButton from '../ActionButton/ActionButton';
-import PostModal from '../PostModal/PostModal';
 import {user} from '../../data/user';
+import PostModalContainer from '../../containers/PostModalContainer/PostModalContainer';
 
 type PropTypes = {
   className?: string;
@@ -25,7 +25,7 @@ const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
 
   const onClosePostModal = (): void => setPostOpen(null);
 
-  const onopenPostModal = (): void => setPostOpen(post);
+  const onOpenPostModal = (): void => setPostOpen(post);
 
   const isLiked = post.likes.some(like => like.authorShortcut.id === user.id)
 
@@ -53,7 +53,7 @@ const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
             icon={commentIcon}
             iconAlt='comment icon'
             buttonText={post.comments.length.toString()}
-            onClick={() => setPostOpen(post)}/>
+            onClick={onOpenPostModal}/>
         </div>
         <ActionButton
           className={styles.commentButtonMargin}
@@ -62,7 +62,7 @@ const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
           buttonText='Share'
           isElementOrderReverse/>
       </div>
-      {postToOpen && <PostModal post={post} onClose={onClosePostModal}/>}
+      {postToOpen && <PostModalContainer post={post} onClose={onClosePostModal}/>}
     </div>
   );
 }

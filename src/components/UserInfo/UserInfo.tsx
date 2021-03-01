@@ -8,7 +8,7 @@ import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
 import {user} from '../../data/user';
 import CreatePostModal from '../CreatePostModal/CreatePostModal';
-import CreatePostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
+import PostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
 
 type PropTypes = {
     className?: string,
@@ -50,7 +50,7 @@ const UserInfo: FC<PropTypes> = (
           onClick={onOpenCreatePostModal}/>
     </div>
 
-    {isOpenCreatePostModal && <CreatePostModalContainer onClose={onCloseCreatePostModal}/>}
+    {isOpenCreatePostModal && <PostModalContainer onClose={onCloseCreatePostModal}/>}
   </div>
 );
 

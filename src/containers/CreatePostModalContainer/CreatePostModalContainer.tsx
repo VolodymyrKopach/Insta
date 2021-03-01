@@ -26,6 +26,7 @@ const CreatePostModalContainer: FC<PropTypes> = ({onClose}: PropTypes) => {
       alert('Upload any photos from your library');
     } else {
       const post: Post = {
+        id: getCurrentTimestamp() + 1,
         photoUrl: uploadedPhoto,
         description: description ? description : '',
         comments: [],

@@ -2,6 +2,7 @@ import {Post} from '../types/Post';
 
 export const posts: Array<Post> = [
   {
+    id: 1614220206000,
     authorShortcut: {
       id: 4,
       name: 'Dmytro Ivanov',
@@ -46,7 +47,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       },
       {
@@ -56,7 +57,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       },
       {
@@ -66,7 +67,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       }
     ],
@@ -74,6 +75,7 @@ export const posts: Array<Post> = [
     description:'Старовинні вузькі вулички, маленькі затишні кафе, бруківка і будинки, які не втратили свій первозданний вигляд - так можна описати старий Львів. Ця частина міста по праву вважається місцем, де гості пізнають культуру і традиції Західної України. Засноване у 1256 році, старе місто переносить туристів у часи Австро-Угорської імперії. Неможливо залишитися байдужим до цієї частини міста. Прогулюючись вулицями Вірменська (на якій стоїть також Вірменська церква і Національний Музей), Краківська, Лесі Українки та Друкарська ви поринете в атмосферу старої Європи.'
   },
   {
+    id: 1614047406000,
     authorShortcut: {
       id: 4,
       name: 'Petro Shevchenko',
@@ -118,7 +120,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       },
       {
@@ -128,7 +130,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       },
       {
@@ -138,7 +140,7 @@ export const posts: Array<Post> = [
           photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
         },
         text: 'Cool image 👏great shot👍📷',
-        postedTime: '12 min',
+        createdAt: 1614573975000,
         likes: 24
       }
     ],

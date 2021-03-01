@@ -45,6 +45,7 @@
       .commentsSection {
         padding: 0 2rem;
         height: 28.25rem;
+        overflow-y: scroll;
 
         .comment {
           margin: 1.25rem 0;
@@ -85,6 +86,7 @@
           font-size: 1rem;
           line-height: 1.25rem;
           color: #0087FF;
+          cursor: pointer;
         }
       }
     }

@@ -1,5 +1,6 @@
 import {Post} from '../types/Post';
 import {User} from '../types/User';
+import {Comment} from '../types/Comment'
 
 export type GlobalState = {
   posts: {
@@ -27,9 +28,13 @@ export type CreatePostAction = {
 export const ADD_COMMENT = 'ADD_COMMENT';
 export type AddCommentAction = {
   type: typeof ADD_COMMENT,
-  payload: Comment
+  payload: {
+    comment: Comment,
+    postId: number
+  }
 };
 
 
 export type PostsActionTypes =
-  | CreatePostAction;
+  | CreatePostAction
+  | AddCommentAction;
