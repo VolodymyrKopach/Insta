@@ -4,6 +4,7 @@ import React, {FC} from 'react';
 import classNames from 'classnames';
 
 import likeIcon from '../../assets/img/like.svg';
+import activeLikeIcon from '../../assets/img/active_like.svg';
 import PostAuthor from '../PostAuthor/PostAuthor';
 import {Post} from '../../types/Post';
 import Divider from '../Divider/Divider';
@@ -16,10 +17,21 @@ type PropTypes = {
   post: Post,
   onClose: () => void,
   onAddComment: () => void,
+  toggleLike: () => void,
+  isLiked: boolean,
   onChangeComment: (event: any) => void
 };
 
-const PostModal: FC<PropTypes> = ({post, onClose, onAddComment, onChangeComment, comment}: PropTypes) => (
+const PostModal: FC<PropTypes> = (
+  {
+    post,
+    onClose,
+    onAddComment,
+    onChangeComment,
+    toggleLike,
+    isLiked,
+    comment
+  }: PropTypes) => (
   <div className={styles.container}>
     <div className={styles.postModal}>
       <img
@@ -39,7 +51,11 @@ const PostModal: FC<PropTypes> = ({post, onClose, onAddComment, onChangeComment,
         </div>
         <Divider/>
         <div className={styles.likesSection}>
-          <ActionButton buttonText={post.likes.length.toString()} iconAlt='like' icon={likeIcon}/>
+          <ActionButton
+            buttonText={post.likes.length.toString()}
+            onClick={toggleLike}
+            iconAlt='like'
+            icon={isLiked ? activeLikeIcon : likeIcon}/>
         </div>
         <Divider/>
         <div className={styles.addCommentSection}>

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {Post} from '../../types/Post'
 import {Comment} from '../../types/Comment'
-import {addCommentAction} from '../../redux/posts/actions';
+import {addCommentAction, addLikeAction, deleteLikeAction} from '../../redux/posts/actions';
 import PostModal from '../../components/PostModal/PostModal';
 import {User} from '../../types/User';
 import {userSelector} from '../../redux/user/selectors';
@@ -21,7 +21,6 @@ const PostModalContainer: FC<PropTypes> = ({post, onClose}: PropTypes) => {
   const user: User = useSelector(userSelector);
 
   const [comment, setComment] = React.useState<string>('');
-
   const onChangeComment = (event: any) => {
     setComment(event.target.value);
   }
@@ -39,10 +38,26 @@ const PostModalContainer: FC<PropTypes> = ({post, onClose}: PropTypes) => {
           createdAt: getCurrentTimestamp(),
           likes: 0
         }
-
       dispatch(addCommentAction({comment: newComment, postId: post.id}));
 
       setComment('');
+    }
+  }
+
+  const isLiked = post.likes.some(like => like.authorShortcut.id === user.id);
+  const toggleLike = () => {
+    const like = {
+      authorShortcut: {
+        id: user.id,
+        name: user.name,
+        photoUrl: user.photoUrl
+      }
+    }
+
+    if (isLiked) {
+      dispatch(deleteLikeAction({like: like, postId: post.id}));
+    } else {
+      dispatch(addLikeAction({like: like, postId: post.id}));
     }
   }
 
@@ -52,7 +67,9 @@ const PostModalContainer: FC<PropTypes> = ({post, onClose}: PropTypes) => {
       comment={comment}
       onClose={onClose}
       onChangeComment={onChangeComment}
-      onAddComment={onAddComment}/>
+      onAddComment={onAddComment}
+      toggleLike={toggleLike}
+      isLiked={isLiked}/>
   );
 }
 

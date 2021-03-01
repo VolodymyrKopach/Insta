@@ -11,23 +11,30 @@ import {Post as PostEntity} from '../../types/Post'
 import PostHeader from '../PostHeader/PostHeader';
 import Typography from '../Typography/Typography';
 import ActionButton from '../ActionButton/ActionButton';
-import {user} from '../../data/user';
 import PostModalContainer from '../../containers/PostModalContainer/PostModalContainer';
 
 type PropTypes = {
   className?: string;
-  post: PostEntity
+  post: PostEntity,
+  isLiked: boolean,
+  postToOpen: PostEntity | null,
+  toggleLike: () => void,
+  setPostToOpen: (post: PostEntity) => void,
+  onClosePostModal: () => void,
+  onOpenPostModal: () => void,
 };
 
-const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
-
-  const [postToOpen, setPostOpen] = React.useState<PostEntity | null>(null);
-
-  const onClosePostModal = (): void => setPostOpen(null);
-
-  const onOpenPostModal = (): void => setPostOpen(post);
-
-  const isLiked = post.likes.some(like => like.authorShortcut.id === user.id)
+const Post: FC<PropTypes> = (
+  {
+    className,
+    post,
+    isLiked,
+    toggleLike,
+    postToOpen,
+    setPostToOpen,
+    onClosePostModal,
+    onOpenPostModal
+  }: PropTypes) => {
 
   return (
     <div className={classNames(styles.post, className)}>
@@ -36,7 +43,7 @@ const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
         className={styles.photo}
         src={post.photoUrl}
         alt='post'
-        onClick={() => setPostOpen(post)}/>
+        onClick={() => setPostToOpen(post)}/>
       <Typography
         className={styles.description}
         color='primary'
@@ -47,7 +54,8 @@ const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
           <ActionButton
             icon={isLiked ? activeLikeIcon : likeIcon}
             iconAlt='like icon'
-            buttonText={post.likes.length.toString()}/>
+            buttonText={post.likes.length.toString()}
+            onClick={toggleLike}/>
           <ActionButton
             className={styles.commentButtonMargin}
             icon={commentIcon}

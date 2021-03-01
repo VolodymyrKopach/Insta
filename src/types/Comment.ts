@@ -1,7 +1,7 @@
-import {Author} from './Author';
+import {AuthorShortcut} from './AuthorShortcut';
 
 export interface Comment {
-  authorShortcut: Author
+  authorShortcut: AuthorShortcut
   text: string;
   createdAt: number;
   likes: number;

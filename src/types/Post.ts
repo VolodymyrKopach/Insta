@@ -1,4 +1,4 @@
-import {Author} from './Author';
+import {AuthorShortcut} from './AuthorShortcut';
 import {Comment} from './Comment';
 import {Like} from './Like';
 
@@ -9,5 +9,5 @@ export interface Post {
   comments: Array<Comment>;
   createdAt: number;
   likes: Array<Like>;
-  authorShortcut: Author;
+  authorShortcut: AuthorShortcut;
 }

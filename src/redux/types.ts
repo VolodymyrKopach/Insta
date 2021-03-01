@@ -1,6 +1,7 @@
 import {Post} from '../types/Post';
 import {User} from '../types/User';
 import {Comment} from '../types/Comment'
+import {Like} from '../types/Like';
 
 export type GlobalState = {
   posts: {
@@ -34,7 +35,26 @@ export type AddCommentAction = {
   }
 };
 
+export const ADD_LIKE = 'ADD_LIKE';
+export type AddLikeAction = {
+  type: typeof ADD_LIKE,
+  payload: {
+    like: Like,
+    postId: number
+  }
+};
+
+export const DELETE_LIKE = 'DELETE_LIKE';
+export type DeleteLikeAction = {
+  type: typeof DELETE_LIKE,
+  payload: {
+    like: Like,
+    postId: number
+  }
+};
 
 export type PostsActionTypes =
   | CreatePostAction
-  | AddCommentAction;
+  | AddCommentAction
+  | AddLikeAction
+  | DeleteLikeAction;

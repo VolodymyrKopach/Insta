@@ -1,5 +1,5 @@
-import {Author} from './Author';
+import {AuthorShortcut} from './AuthorShortcut';
 
 export interface Like {
-  authorShortcut: Author
+  authorShortcut: AuthorShortcut
 }
