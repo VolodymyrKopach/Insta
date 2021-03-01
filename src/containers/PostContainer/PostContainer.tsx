@@ -30,7 +30,7 @@ const PostContainer: FC<PropTypes> = ({className, post}: PropTypes) => {
     const like = {
       authorShortcut: {
         id: user.id,
-        name: user.name,
+        name: user.firstName,
         photoUrl: user.photoUrl
       }
     }

@@ -34,7 +34,7 @@ const CreatePostModalContainer: FC<PropTypes> = ({onClose}: PropTypes) => {
         likes: [],
         authorShortcut: {
           id: user.id,
-          name: user.name,
+          name: user.firstName,
           photoUrl: user.photoUrl
         }
       }

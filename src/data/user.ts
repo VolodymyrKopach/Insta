@@ -1,6 +1,7 @@
 export const user = {
   id: 55,
-  name: 'Alexandr Sokolov',
+  firstName: 'Alexandr',
+  lastName: 'Sokolov',
   jobTitle:'Photographer',
   description: 'Like to travel and shoot cinematic and b/w photos Tools - Capture One for Raw',
   followers: 952,

@@ -35,7 +35,7 @@ const PostModalContainer: FC<PropTypes> = ({post, onClose}: PropTypes) => {
         {
           authorShortcut: {
             id: user.id,
-            name: user.name,
+            name: user.firstName,
             photoUrl: user.photoUrl
           },
           text: comment,
@@ -53,7 +53,7 @@ const PostModalContainer: FC<PropTypes> = ({post, onClose}: PropTypes) => {
     const like = {
       authorShortcut: {
         id: user.id,
-        name: user.name,
+        name: user.firstName,
         photoUrl: user.photoUrl
       }
     }

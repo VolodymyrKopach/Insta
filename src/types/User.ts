@@ -1,6 +1,7 @@
 export type User = {
   id: number,
-  name: string
+  firstName: string,
+  lastName: string,
   jobTitle: string
   description: string
   followers: number,

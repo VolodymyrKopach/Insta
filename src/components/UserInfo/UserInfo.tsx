@@ -6,22 +6,31 @@ import classNames from 'classnames';
 import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
-import {user} from '../../data/user';
-import PostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
+import CreatePostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
+import EditUserModalContainer from '../../containers/EditProfileModalContainer/EditProfileModalContainer';
+import {User} from '../../types/User';
 
 type PropTypes = {
   className?: string,
+  user: User,
   isOpenCreatePostModal: boolean,
   onCloseCreatePostModal: () => void,
-  onOpenCreatePostModal: () => void
+  onOpenCreatePostModal: () => void,
+  isOpenEditUserModal: boolean,
+  onCloseEditUserModal: () => void,
+  onOpenEditUserModal: () => void
 };
 
 const UserInfo: FC<PropTypes> = (
   {
     className,
+    user,
     onCloseCreatePostModal,
     onOpenCreatePostModal,
-    isOpenCreatePostModal
+    isOpenCreatePostModal,
+    isOpenEditUserModal,
+    onCloseEditUserModal,
+    onOpenEditUserModal
   }: PropTypes) => (
   <div className={classNames(styles.userInfo, className)}>
     <div className={styles.followersSection}>
@@ -36,11 +45,11 @@ const UserInfo: FC<PropTypes> = (
       </div>
     </div>
     <div className={styles.titleSection}>
-      <Typography text={`${user.name} - ${user.jobTitle} `} color='secondary' size='medium'/>
+      <Typography text={`${user.firstName} ${user.lastName} - ${user.jobTitle} `} color='secondary' size='medium'/>
       <Typography className={styles.description} text={user.description} color='primary' size='small'/>
     </div>
     <div className={styles.actionSection}>
-      <Button color='white' text='Edit profile' size='small'/>
+      <Button color='white' text='Edit profile' size='small' onClick={onOpenEditUserModal}/>
       <Button
         className={styles.buttonMargin}
         color='blue'
@@ -49,7 +58,8 @@ const UserInfo: FC<PropTypes> = (
         onClick={onOpenCreatePostModal}/>
     </div>
 
-    {isOpenCreatePostModal && <PostModalContainer onClose={onCloseCreatePostModal}/>}
+    {isOpenCreatePostModal && <CreatePostModalContainer onClose={onCloseCreatePostModal}/>}
+    {isOpenEditUserModal && <EditUserModalContainer onClose={onCloseEditUserModal}/>}
   </div>
 );
 
