@@ -38,7 +38,6 @@ const CreatePostModalContainer: FC<PropTypes> = ({onClose}: PropTypes) => {
           photoUrl: user.photoUrl
         }
       }
-
       dispatch(createPostAction(post))
 
       onClose();

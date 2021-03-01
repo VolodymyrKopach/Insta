@@ -1,5 +1,5 @@
 import {AuthorShortcut} from './AuthorShortcut';
 
-export interface Like {
+export type Like = {
   authorShortcut: AuthorShortcut
 }

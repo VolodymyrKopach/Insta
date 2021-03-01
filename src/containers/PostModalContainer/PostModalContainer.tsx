@@ -3,7 +3,11 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {Post} from '../../types/Post'
 import {Comment} from '../../types/Comment'
-import {addCommentAction, addLikeAction, deleteLikeAction} from '../../redux/posts/actions';
+import {
+  addCommentAction,
+  addLikeAction,
+  deleteLikeAction
+} from '../../redux/posts/actions';
 import PostModal from '../../components/PostModal/PostModal';
 import {User} from '../../types/User';
 import {userSelector} from '../../redux/user/selectors';

@@ -10,7 +10,6 @@ const UserInfoContainer: FC<PropTypes> = ({className}: PropTypes) => {
   const [isOpenCreatePostModal, setOpenCreatePostModal] = React.useState<boolean>(false);
 
   const onCloseCreatePostModal = (): void => setOpenCreatePostModal(false);
-
   const onOpenCreatePostModal = (): void => setOpenCreatePostModal(true);
 
   return (

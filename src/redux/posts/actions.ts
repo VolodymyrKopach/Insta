@@ -1,6 +1,12 @@
 import {Post} from '../../types/Post';
 import {Comment} from '../../types/Comment'
-import {ADD_COMMENT, ADD_LIKE, CREATE_POST, DELETE_LIKE, PostsActionTypes} from '../types';
+import {
+  ADD_COMMENT,
+  ADD_LIKE,
+  CREATE_POST,
+  DELETE_LIKE,
+  PostsActionTypes
+} from './types';
 import {Like} from '../../types/Like';
 
 export function createPostAction(post: Post): PostsActionTypes {

@@ -2,32 +2,32 @@
   display: flex;
   justify-content: space-between;
 
- .mainInfo {
-   display: flex;
-   align-items: center;
+  .mainInfo {
+    display: flex;
+    align-items: center;
 
-   .postedInfo {
-     display: flex;
-     flex-direction: column;
-     margin-left: .75rem;
+    .postedInfo {
+      display: flex;
+      flex-direction: column;
+      margin-left: .75rem;
 
-     .infoSection{
-       display: flex;
-       justify-content: space-around;
+      .infoSection {
+        display: flex;
+        justify-content: space-around;
 
-       p {
-         margin-right: 1rem;
-       }
+        p {
+          margin-right: 1rem;
+        }
 
-       :last-child {
-         margin-right: 0;
-       }
+        :last-child {
+          margin-right: 0;
+        }
 
-     }
-   }
- }
+      }
+    }
+  }
 
-  .likeIcon{
+  .likeIcon {
     width: 1.75rem;
   }
 }

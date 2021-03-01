@@ -1,7 +1,7 @@
 import styles from './MainInfo.module.scss';
 
 import React, {FC} from 'react';
-import Post from '../Post/Post';
+
 import Stories from '../Stories/Stories';
 import {Post as PostEntity} from '../../types/Post'
 import PostContainer from '../../containers/PostContainer/PostContainer';

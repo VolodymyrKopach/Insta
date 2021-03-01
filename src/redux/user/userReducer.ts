@@ -1,4 +1,4 @@
-import {UserState} from '../types'
+import {UserState} from './types'
 import {user} from '../../data/user';
 
 const userInitialState: UserState = {
@@ -6,5 +6,5 @@ const userInitialState: UserState = {
 }
 
 export const userReducer = (state = userInitialState) => {
-  return state
+  return state;
 }

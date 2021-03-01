@@ -2,7 +2,7 @@ import {AuthorShortcut} from './AuthorShortcut';
 import {Comment} from './Comment';
 import {Like} from './Like';
 
-export interface Post {
+export type Post = {
   id: number,
   photoUrl: string;
   description: string;

@@ -1,6 +1,6 @@
 import {AuthorShortcut} from './AuthorShortcut';
 
-export interface Comment {
+export type Comment = {
   authorShortcut: AuthorShortcut
   text: string;
   createdAt: number;

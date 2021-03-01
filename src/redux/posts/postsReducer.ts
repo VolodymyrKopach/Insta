@@ -1,4 +1,11 @@
-import {ADD_COMMENT, ADD_LIKE, CREATE_POST, DELETE_LIKE, PostsActionTypes, PostsState} from '../types'
+import {
+  ADD_COMMENT,
+  ADD_LIKE,
+  CREATE_POST,
+  DELETE_LIKE,
+  PostsActionTypes,
+  PostsState
+} from './types'
 import {posts} from '../../data/posts';
 
 const postsInitialState: PostsState = {
@@ -6,7 +13,6 @@ const postsInitialState: PostsState = {
 }
 
 export const postsReducer = (state = postsInitialState, action: PostsActionTypes) => {
-
   switch (action.type) {
     case CREATE_POST:
       return {...state, posts: state.posts.concat([action.payload])}

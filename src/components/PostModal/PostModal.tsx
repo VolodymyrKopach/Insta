@@ -37,7 +37,7 @@ const PostModal: FC<PropTypes> = (
       <img
         className={classNames(styles.postPhoto)}
         src={post.photoUrl}
-        alt='post photo'/>
+        alt='postPhoto'/>
       <div className={styles.infoSection}>
         <div className={styles.modalHeaderSection}>
           <PostAuthor post={post}/>

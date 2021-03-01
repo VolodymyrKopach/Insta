@@ -1,12 +1,12 @@
 import styles from './Comment.module.scss';
 
 import React, {FC} from 'react';
+import classNames from 'classnames';
 
 import likeIcon from '../../assets/img/like.svg';
 import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
 import {Comment as CommentType} from '../../types/Comment';
-import classNames from 'classnames';
 import {dateWithTimeFromTimestamp} from '../../utils/dateTimeUtils';
 
 type PropTypes = {

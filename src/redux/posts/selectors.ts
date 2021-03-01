@@ -1,4 +1,4 @@
-import {GlobalState, PostsState} from '../types';
+import {GlobalState} from './types';
 import {Post} from '../../types/Post';
 
 export const postsSelector = (state: GlobalState): Array<Post> => {

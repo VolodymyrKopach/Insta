@@ -28,13 +28,13 @@ const CreatePostModal: FC<PropTypes> = (
   const renderUploadedPhoto = (): ReactNode => {
     if (uploadedPhoto) {
       return (
-        <img className={styles.uploadedPhoto} src={uploadedPhoto} alt='uploaded photo'/>
+        <img className={styles.uploadedPhoto} src={uploadedPhoto} alt='uploadedPhoto'/>
       );
     }
 
     return (
       <>
-        <img src={photos} alt='uploaded photo'/>
+        <img src={photos} alt='uploadedPhoto'/>
         <Typography
           className={styles.uploadTitle}
           size='medium'

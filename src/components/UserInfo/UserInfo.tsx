@@ -7,14 +7,13 @@ import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
 import {user} from '../../data/user';
-import CreatePostModal from '../CreatePostModal/CreatePostModal';
 import PostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
 
 type PropTypes = {
-    className?: string,
-    isOpenCreatePostModal: boolean,
-    onCloseCreatePostModal: () => void,
-    onOpenCreatePostModal: () => void
+  className?: string,
+  isOpenCreatePostModal: boolean,
+  onCloseCreatePostModal: () => void,
+  onOpenCreatePostModal: () => void
 };
 
 const UserInfo: FC<PropTypes> = (
@@ -23,31 +22,31 @@ const UserInfo: FC<PropTypes> = (
     onCloseCreatePostModal,
     onOpenCreatePostModal,
     isOpenCreatePostModal
-  } : PropTypes) => (
+  }: PropTypes) => (
   <div className={classNames(styles.userInfo, className)}>
     <div className={styles.followersSection}>
-        <div className={styles.followInfo}>
-            <Typography text={user.followers.toString()} color='secondary' size='medium'/>
-            <Typography text='Followers' color='primary' size='medium'/>
-        </div>
-        <Avatar className={styles.avatar} size='large' photoUrl={user.photoUrl}/>
-        <div className={styles.followInfo}>
-            <Typography text={user.following.toString()} color='secondary' size='medium'/>
-            <Typography text='Following' color='primary' size='medium'/>
-        </div>
+      <div className={styles.followInfo}>
+        <Typography text={user.followers.toString()} color='secondary' size='medium'/>
+        <Typography text='Followers' color='primary' size='medium'/>
+      </div>
+      <Avatar className={styles.avatar} size='large' photoUrl={user.photoUrl}/>
+      <div className={styles.followInfo}>
+        <Typography text={user.following.toString()} color='secondary' size='medium'/>
+        <Typography text='Following' color='primary' size='medium'/>
+      </div>
     </div>
     <div className={styles.titleSection}>
-        <Typography text={`${user.name} - ${user.jobTitle} `} color='secondary' size='medium'/>
-        <Typography className={styles.description} text={user.description} color='primary' size='small'/>
+      <Typography text={`${user.name} - ${user.jobTitle} `} color='secondary' size='medium'/>
+      <Typography className={styles.description} text={user.description} color='primary' size='small'/>
     </div>
     <div className={styles.actionSection}>
-        <Button color='white' text='Edit profile' size='small'/>
-        <Button
-          className={styles.buttonMargin}
-          color='blue'
-          size='small'
-          text='New post'
-          onClick={onOpenCreatePostModal}/>
+      <Button color='white' text='Edit profile' size='small'/>
+      <Button
+        className={styles.buttonMargin}
+        color='blue'
+        size='small'
+        text='New post'
+        onClick={onOpenCreatePostModal}/>
     </div>
 
     {isOpenCreatePostModal && <PostModalContainer onClose={onCloseCreatePostModal}/>}

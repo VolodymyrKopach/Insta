@@ -35,7 +35,6 @@ const Post: FC<PropTypes> = (
     onClosePostModal,
     onOpenPostModal
   }: PropTypes) => {
-
   return (
     <div className={classNames(styles.post, className)}>
       <PostHeader post={post}/>

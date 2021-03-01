@@ -10,7 +10,7 @@ type PropTypes = {
   text: string;
 };
 
-const Typography: FC<PropTypes> = ({className, size, color, text} : PropTypes) => (
+const Typography: FC<PropTypes> = ({className, size, color, text}: PropTypes) => (
   <p className={classNames(styles.typography, styles[color], styles[size], className)}>{text}</p>
 );
 

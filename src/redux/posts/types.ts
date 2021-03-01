@@ -1,7 +1,7 @@
-import {Post} from '../types/Post';
-import {User} from '../types/User';
-import {Comment} from '../types/Comment'
-import {Like} from '../types/Like';
+import {Post} from '../../types/Post';
+import {User} from '../../types/User';
+import {Comment} from '../../types/Comment'
+import {Like} from '../../types/Like';
 
 export type GlobalState = {
   posts: {
@@ -14,10 +14,6 @@ export type GlobalState = {
 
 export type PostsState = {
   posts: Array<Post>
-};
-
-export type UserState = {
-  user: User
 };
 
 export const CREATE_POST = 'CREATE_POST';

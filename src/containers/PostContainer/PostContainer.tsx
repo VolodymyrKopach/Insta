@@ -1,5 +1,8 @@
 import React, {FC} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {
+  useDispatch,
+  useSelector
+} from 'react-redux';
 
 import {Post as PostEntity} from '../../types/Post'
 import {addLikeAction, deleteLikeAction} from '../../redux/posts/actions';
@@ -22,7 +25,6 @@ const PostContainer: FC<PropTypes> = ({className, post}: PropTypes) => {
   const onOpenPostModal = (): void => setPostToOpen(post);
 
   const user: User = useSelector(userSelector);
-
   const isLiked = post.likes.some(like => like.authorShortcut.id === user.id);
   const toggleLike = () => {
     const like = {
