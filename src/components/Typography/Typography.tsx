@@ -6,7 +6,7 @@ import classNames from 'classnames';
 type PropTypes = {
   className?: string;
   size: 'small' | 'medium' | 'large';
-  color: 'primary' | 'secondary';
+  color: 'primary' | 'secondary' | 'white';
   text: string;
 };
 

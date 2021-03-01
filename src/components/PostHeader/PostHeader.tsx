@@ -2,9 +2,7 @@ import styles from './PostHeader.module.scss';
 
 import React, {FC} from 'react';
 
-import Avatar from '../Avatar/Avatar';
-import Typography from '../Typography/Typography';
-import {Post} from '../../entities/Post';
+import {Post} from '../../types/Post';
 import PostAuthor from '../PostAuthor/PostAuthor';
 
 type PropTypes = {

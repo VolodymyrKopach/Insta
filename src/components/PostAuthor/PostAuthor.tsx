@@ -5,7 +5,8 @@ import classNames from 'classnames';
 
 import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
-import {Post} from '../../entities/Post';
+import {Post} from '../../types/Post';
+import {dateWithTimeFromTimestamp} from '../../utils/dateTimeUtils';
 
 type PropTypes = {
   className?: string;
@@ -18,8 +19,7 @@ const PostAuthor: FC<PropTypes> = ({className, post, isShowPostedDate}: PropType
     <Avatar size='small' photoUrl={post.authorShortcut.photoUrl}/>
     <div className={styles.postedInfo}>
       <Typography text={post.authorShortcut.name} color='secondary' size='medium'/>
-      {isShowPostedDate
-      && <Typography text={post.time} color='primary' size='small'/>}
+      {isShowPostedDate && <Typography text={dateWithTimeFromTimestamp(post.createdAt)} color='primary' size='small'/>}
     </div>
   </div>
 );

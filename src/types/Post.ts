@@ -6,7 +6,7 @@ export interface Post {
   photoUrl: string;
   description: string;
   comments: Array<Comment>;
-  time: string;
+  createdAt: number;
   likes: Array<Like>;
   authorShortcut: Author;
 }

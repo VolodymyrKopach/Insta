@@ -1,16 +1,19 @@
 import styles from './MainInfo.module.scss';
 
 import React, {FC} from 'react';
-
-import {posts} from '../../data/posts';
 import Post from '../Post/Post';
 import Stories from '../Stories/Stories';
+import {Post as PostEntity} from '../../types/Post'
 
-const MainInfo: FC = () => (
+type PropTypes = {
+  posts: Array<PostEntity>
+};
+
+const MainInfo: FC<PropTypes> = ({posts}: PropTypes) => (
   <div className={styles.mainInfo}>
     <Stories className={styles.stories}/>
-    {posts.map((post, index) => (
-      <Post key={index} className='post-margin' post={post}/>
+    {posts.sort((a: PostEntity, b: PostEntity) => a.createdAt - b.createdAt).map((post, index) => (
+      <Post key={index} post={post}/>
     ))}
   </div>
 );

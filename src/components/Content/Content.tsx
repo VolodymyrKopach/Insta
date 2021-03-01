@@ -2,13 +2,13 @@ import styles from './Content.module.scss';
 
 import React, {FC} from 'react';
 
-import MainInfo from '../MainInfo/MainInfo';
-import UserInfo from '../UserInfo/UserInfo';
+import MainInfoContainer from '../../containers/MainInfoContainer/MainInfoContainer';
+import UserInfoContainer from '../../containers/UserInfoContainer/UserInfoContainer';
 
 const Content: FC = () => (
   <div className={styles.content}>
-    <MainInfo/>
-    <UserInfo className={styles.userInfo}/>
+    <MainInfoContainer/>
+    <UserInfoContainer className={styles.userInfo}/>
   </div>
 );
 

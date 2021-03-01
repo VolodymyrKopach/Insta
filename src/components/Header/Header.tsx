@@ -10,7 +10,7 @@ const Header: FC = () => (
   <div className={styles.header}>
     <div className={styles.logo}>Linkstagram</div>
     <div className={styles.userSection}>
-      <Button color='black' text='Home'/>
+      <Button color='black' text='Home' size='small'/>
       <button className={styles.languageSelector}>EN</button>
       <Avatar size='small' photoUrl={user.photoUrl}/>
     </div>

@@ -1,4 +1,4 @@
-.postModalContainer {
+.container {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,12 +9,10 @@
   justify-content: center;
   overflow-y: scroll;
   background-color: rgba(229, 229, 229, 0.4);
-  z-index: 10;
 
   .postModal {
     display: flex;
     width: 67.5rem;
-    height: 42.5rem;
     background-color: #FFFFFF;
     border-radius: 2rem;
 
@@ -32,7 +30,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 26rem;
         height: 2.5rem;
         padding: 1.25rem 2rem;
 
@@ -47,7 +44,7 @@
 
       .commentsSection {
         padding: 0 2rem;
-        height: 29rem;
+        height: 28.25rem;
 
         .comment {
           margin: 1.25rem 0;
@@ -68,8 +65,21 @@
         height: 2.5rem;
         padding: 1.25rem 2rem;
 
+        .commentInput {
+          width: 100%;
+          margin-right: 1rem;
+          border: 0;
+
+          font-family: Poppins, serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 20px;
+          color: #808080;
+        }
+
         .sendButton {
-          font-family: Poppins;
+          font-family: Poppins, serif;
           font-style: normal;
           font-weight: 600;
           font-size: 1rem;

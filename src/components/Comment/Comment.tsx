@@ -6,7 +6,7 @@ import likeIcon from '../../assets/img/like.svg';
 import activeLikeIcon from '../../assets/img/active_like.svg';
 import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
-import {Comment as CommentType} from '../../entities/Comment';
+import {Comment as CommentType} from '../../types/Comment';
 import classNames from 'classnames';
 
 type PropTypes = {

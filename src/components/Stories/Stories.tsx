@@ -13,7 +13,7 @@ type PropTypes = {
 const Stories: FC<PropTypes> = ({className} : PropTypes) => (
   <div className={classNames(styles.stories, className)}>
     {stories.map((story, index) => (
-      <Avatar className={styles.story} size='medium' photoUrl={story.author.photoUrl}/>
+      <Avatar key={index} className={styles.story} size='medium' photoUrl={story.author.photoUrl}/>
     ))}
   </div>
 );

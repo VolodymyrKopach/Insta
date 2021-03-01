@@ -7,7 +7,7 @@ import likeIcon from '../../assets/img/like.svg';
 import activeLikeIcon from '../../assets/img/active_like.svg';
 import commentIcon from '../../assets/img/comment.svg';
 import arrowIcon from '../../assets/img/arrow.svg';
-import {Post as PostEntity} from '../../entities/Post'
+import {Post as PostEntity} from '../../types/Post'
 import PostHeader from '../PostHeader/PostHeader';
 import Typography from '../Typography/Typography';
 import ActionButton from '../ActionButton/ActionButton';
@@ -21,7 +21,7 @@ type PropTypes = {
 
 const Post: FC<PropTypes> = ({className, post}: PropTypes) => {
 
-  const [postToOpen, setPostOpen] = React.useState<PostEntity | null>(post);
+  const [postToOpen, setPostOpen] = React.useState<PostEntity | null>(null);
 
   const onClosePostModal = (): void => setPostOpen(null);
 

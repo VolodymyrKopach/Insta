@@ -1,5 +1,4 @@
-import {Post} from '../entities/Post';
-import {Author} from '../entities/Author';
+import {Post} from '../types/Post';
 
 export const posts: Array<Post> = [
   {
@@ -8,7 +7,7 @@ export const posts: Array<Post> = [
       name: 'Dmytro Ivanov',
       photoUrl: 'https://www.wmj.ru/thumb/0x1502/filters:quality(75):no_upscale()/imgs/2017/11/08/13/1145577/02f490db91711eb4e7ef37ecedd7e2e9cb02dea6.jpg'
     },
-    time: '9:46',
+    createdAt: 1614220206000,
     likes: [
       {
         authorShortcut: {
@@ -80,7 +79,7 @@ export const posts: Array<Post> = [
       name: 'Petro Shevchenko',
       photoUrl: 'https://rvcouch.ru/wp-content/uploads/2019/08/aa4c387004c44ad421ccc4cf728493bb-300x300.jpg'
     },
-    time: '8:15',
+    createdAt: 1614047406000,
     likes: [
       {
         authorShortcut: {

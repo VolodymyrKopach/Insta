@@ -7,12 +7,23 @@ import Avatar from '../Avatar/Avatar';
 import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
 import {user} from '../../data/user';
+import CreatePostModal from '../CreatePostModal/CreatePostModal';
+import CreatePostModalContainer from '../../containers/CreatePostModalContainer/CreatePostModalContainer';
 
 type PropTypes = {
-    className?: string;
+    className?: string,
+    isOpenCreatePostModal: boolean,
+    onCloseCreatePostModal: () => void,
+    onOpenCreatePostModal: () => void
 };
 
-const UserInfo: FC<PropTypes> = ({className} : PropTypes) => (
+const UserInfo: FC<PropTypes> = (
+  {
+    className,
+    onCloseCreatePostModal,
+    onOpenCreatePostModal,
+    isOpenCreatePostModal
+  } : PropTypes) => (
   <div className={classNames(styles.userInfo, className)}>
     <div className={styles.followersSection}>
         <div className={styles.followInfo}>
@@ -26,13 +37,20 @@ const UserInfo: FC<PropTypes> = ({className} : PropTypes) => (
         </div>
     </div>
     <div className={styles.titleSection}>
-        <Typography text={user.title} color='secondary' size='medium'/>
+        <Typography text={`${user.name} - ${user.jobTitle} `} color='secondary' size='medium'/>
         <Typography className={styles.description} text={user.description} color='primary' size='small'/>
     </div>
     <div className={styles.actionSection}>
-        <Button color='white' text='Edit profile'/>
-        <Button className={styles.buttonMargin} color='blue' text='New post'/>
+        <Button color='white' text='Edit profile' size='small'/>
+        <Button
+          className={styles.buttonMargin}
+          color='blue'
+          size='small'
+          text='New post'
+          onClick={onOpenCreatePostModal}/>
     </div>
+
+    {isOpenCreatePostModal && <CreatePostModalContainer onClose={onCloseCreatePostModal}/>}
   </div>
 );
 

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import likeIcon from '../../assets/img/like.svg';
 import activeLikeIcon from '../../assets/img/active_like.svg';
 import PostAuthor from '../PostAuthor/PostAuthor';
-import {Post} from '../../entities/Post';
+import {Post} from '../../types/Post';
 import Divider from '../Divider/Divider';
 import Comment from '../Comment/Comment';
 import ActionButton from '../ActionButton/ActionButton';
@@ -19,7 +19,7 @@ type PropTypes = {
 };
 
 const PostModal: FC<PropTypes> = ({post, onClose}: PropTypes) => (
-  <div className={styles.postModalContainer}>
+  <div className={styles.container}>
     <div className={styles.postModal}>
       <img
         className={classNames(styles.postPhoto)}
@@ -42,7 +42,7 @@ const PostModal: FC<PropTypes> = ({post, onClose}: PropTypes) => (
         </div>
         <Divider/>
         <div className={styles.addCommentSection}>
-          <input type='text' placeholder='Add a comment...'/>
+          <input className={styles.commentInput} type='text' placeholder='Add a comment...'/>
           <div className={styles.sendButton}>Send</div>
         </div>
       </div>
